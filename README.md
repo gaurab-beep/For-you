@@ -1,3 +1,6 @@
-
-[Open Love Page](https://gaurab-beep.github.io/For-you/love.html)
+index.html (photo)
+   ↓
+message.html
+   ↓
+love.html
 
