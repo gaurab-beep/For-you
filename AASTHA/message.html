@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Feelings 💕</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 22px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #d6336c;
+      margin-bottom: 15px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 25px;
+      background: #ff6f91;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    button:hover {
+      background: #ff4f7a;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <p>
+      Whenever I’m with you, I’m different, but in a good way.
+      I smile and laugh more, and I don’t have to pretend everything is okay.
+    </p>
+
+    <p>
+      I can drop the facade with you and feel and express everything genuinely.
+      I no longer feel hurt and alone; I feel safe and loved.
+    </p>
+
+    <p>
+      You have a special place in my heart, and I wanted you to know that.
+      Thank you for being you 💖
+    </p>
+
+    <p>
+      No matter where life takes us, these feelings are real and true 🌸
+    </p>
+
+    <!-- ✅ SEE MORE LOVE BUTTON -->
+    <button onclick="goToLove()">See More Love 💕</button>
+  </div>
+
+  <script>
+    function goToLove() {
+      window.location.href = "love.html"; // Redirect to third page
+    }
+  </script>
+
+</body>
+</html>

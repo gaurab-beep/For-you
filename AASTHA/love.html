@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love & Hearts 💖</title>
+  <style>
+    body { margin:0; height:100vh; background:linear-gradient(135deg,#ff9a9e 0%,#fad0c4 100%); display:flex; justify-content:center; align-items:center; overflow:hidden; font-family:Segoe UI,sans-serif; color:#7a1f39; text-align:center; padding:20px; }
+    .container { max-width:600px; position:relative; z-index:10; }
+    h1 { font-size:2.8rem; margin-bottom:20px; }
+    p { font-size:1.3rem; line-height:1.5; margin-bottom:15px; font-weight:600; text-shadow:1px 1px 2px #fff2f2; }
+    .hearts { position:fixed; bottom:0; left:0; width:100vw; height:100vh; pointer-events:none; overflow:visible; z-index:1; }
+    .heart { position:absolute; bottom:-60px; width:20px; height:20px; background:#ff6f91; transform:rotate(-45deg); animation:floatUp 6s linear infinite; opacity:0.8; border-radius:20px; }
+    .heart::before, .heart::after { content:""; position:absolute; width:20px; height:20px; background:#ff6f91; border-radius:50%; }
+    .heart::before { top:-10px; left:0; }
+    .heart::after { left:10px; top:0; }
+    @keyframes floatUp { 0% { transform:translateY(0) rotate(-45deg); opacity:0.8; } 100% { transform:translateY(-600px) rotate(-45deg); opacity:0; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Love is in the Air 💕</h1>
+    <p>“Where there is love, there is life.”</p>
+    <p>“You are my heart’s favorite place.”</p>
+    <p>“Together is my favorite place to be.”</p>
+    <p>“Every moment with you is a beautiful dream come true.”</p>
+  </div>
+  <div class="hearts" id="heartsContainer"></div>
+  <script>
+    const heartsContainer=document.getElementById('heartsContainer');
+    function createHeart(){
+      const heart=document.createElement('div'); heart.classList.add('heart');
+      heart.style.left=Math.random()*window.innerWidth+'px';
+      const size=10+Math.random()*15; heart.style.width=size+'px'; heart.style.height=size+'px';
+      heart.style.animationDuration=5+Math.random()*3+'s';
+      heartsContainer.appendChild(heart);
+      setTimeout(()=>{heartsContainer.removeChild(heart);},6000);
+    }
+    setInterval(createHeart,300);
+  </script>
+</body>
+</html>
